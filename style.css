@@ -4,83 +4,117 @@
   padding: 0;
 }
 body {
-  width: 1440px;
+  width: 100vw;
   height: 1024px;
   background-color: #211D1D;
-  margin: 85px 80px 0px 80px;
-  border-top: red 1px solid;
+  color: aliceblue;
+  margin: 3% 2% 2% 2%;
+  display: flex;
+}
+.container {
   display: flex;
 }
 aside {
   display: flex;
   flex-flow: column;
-  gap: 22px;
-  padding-right: 40px;
+  gap: 2%;
+  padding-right: 2%;
 }
 aside :nth-child(1) {
-  border: 1px solid white;
+  border: 3px solid white;
   border-radius: 20px;
-  width: 290px;
+  width: 30vw;
   height: 253px;
 }
 aside :nth-child(2) {
-  border: 1px solid white;
+  border: 3px solid white;
   border-radius: 20px;
-  width: 290px;
+  width: 30vw;
   height: 122px;
 }
 aside :nth-child(3) {
-  border: 1px solid white;
+  border: 3px solid white;
   border-radius: 20px;
-  width: 290px;
+  width: 30vw;
   height: 366px;
 }
 main {
   display: flex;
   flex-flow: column;
-  gap: 22px;
-  padding-right: 40px;
+  gap: 2%;
+  padding-right: 2%;
 }
 main :nth-child(1) {
-  border: 1px solid white;
+  border: 3px solid white;
   border-radius: 20px;
-  width: 510px;
+  width: 35vw;
   height: 100px;
 }
 main :nth-child(2) {
-  border: 1px solid white;
+  border: 3px solid white;
   border-radius: 20px;
-  width: 510px;
+  width: 35vw;
   height: 540px;
 }
 main :nth-child(3) {
-  border: 1px solid white;
+  border: 3px solid white;
   border-radius: 20px;
-  width: 510px;
+  width: 35vw;
   height: 100px;
 }
 section {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 2%;
+}
+section .box {
+  display: flex;
   column-gap: 40px;
 }
-section :nth-child(1) {
-  border: 1px solid white;
+section .box :nth-child(1) {
+  border: 3px solid white;
   border-radius: 20px;
-  width: 180px;
+  width: 25vh;
+  height: 180px;
+}
+section .box :nth-child(2) {
+  border: 3px solid white;
+  border-radius: 20px;
+  width: 25vh;
   height: 180px;
 }
 section :nth-child(2) {
-  border: 1px solid white;
+  border: 3px solid white;
   border-radius: 20px;
-  width: 400px;
-  height: 140px;
+  width: 26vw;
+  height: 190px;
 }
-section :nth-child(3) {
-  border: 1px solid white;
+section .reseaux {
+  display: flex;
+  column-gap: 8%;
+}
+section .reseaux :nth-child(1) {
+  border: 3px solid white;
   border-radius: 20px;
-  width: 180px;
+  width: 7.5vw;
+  height: 170px;
+}
+section .reseaux :nth-child(2) {
+  border: 3px solid white;
+  border-radius: 20px;
+  width: 7.5vw;
+  height: 170px;
+}
+section .reseaux :nth-child(3) {
+  border: 3px solid white;
+  border-radius: 20px;
+  width: 7.5vw;
+  height: 170px;
+}
+section :nth-child(4) {
+  border: 3px solid white;
+  border-radius: 20px;
+  width: 26vw;
   height: 180px;
 }
