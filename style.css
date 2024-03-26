@@ -45,8 +45,9 @@ body aside div:nth-child(3) {
   height: 366px;
 }
 body aside h2 {
-  background: -webkit-linear-gradient(#F9815B, #FFA571);
-  padding-bottom: 8px;
+  background: linear-gradient(to right, #F9815B, #FFA571);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 body aside p {
   text-align: center;
