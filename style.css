@@ -22,13 +22,60 @@ body aside {
   flex-flow: column;
   row-gap: 20px;
 }
-body aside div:nth-child(1) {
-  border: 3px solid white;
-  border-radius: 20px;
+body aside .card {
   width: 100%;
   height: 253px;
+  perspective: 1000px;
 }
-body aside div:nth-child(2) {
+body aside .card .card-front::before {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  z-index: 1;
+}
+body aside .card .card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+body aside .card:hover .card-inner {
+  transform: rotateY(-180deg);
+}
+body aside .card .card-front,
+body aside .card .card-back {
+  width: 100%;
+  height: 100%;
+  border: 3px solid white;
+  border-radius: 20px;
+  background-image: url("images/Projet\ 1.png");
+  background-size: cover;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body aside .card .card-front.card-back,
+body aside .card .card-back.card-back {
+  background: linear-gradient(to right, #f9815b, #ffa571);
+  transform: rotateY(180deg);
+}
+body aside .card h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 32px;
+  font-family: "Zen Dots", sans-serif;
+  text-align: center;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  padding: 1%;
+}
+body .Actuellement {
   border: 3px solid white;
   border-radius: 20px;
   width: 100%;
@@ -38,23 +85,27 @@ body aside div:nth-child(2) {
   justify-content: center;
   align-items: center;
 }
-body aside div:nth-child(3) {
+body .Video {
   border: 3px solid white;
   border-radius: 20px;
   width: 100%;
   height: 366px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body aside h2 {
+body h3 {
   background: linear-gradient(to right, #F9815B, #FFA571);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-body aside p {
+  font-size: 24px;
+  font-family: "Zen Dots", sans-serif;
   text-align: center;
 }
-body aside img {
-  width: 100%;
-  height: 247px;
+body p {
+  text-align: center;
+  font-family: "Sen", sans-serif;
+  padding: 3% 2.5% 2% 2.5%;
 }
 body main {
   width: 32%;
@@ -62,13 +113,23 @@ body main {
   flex-flow: column;
   row-gap: 20px;
 }
-body main div:nth-child(1) {
+body main .BoxIcone1 {
   border: 3px solid white;
   border-radius: 20px;
   width: 100%;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body main div:nth-child(2) {
+body main .BoxIcone1 .icon {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  height: 75px;
+  padding: 0px 2% 0px 0%;
+}
+body main .presentation {
   border: 3px solid white;
   border-radius: 20px;
   width: 100%;
@@ -79,14 +140,36 @@ body main div:nth-child(2) {
   flex-direction: column;
   gap: 31px;
 }
+body main h1 {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
 body main .bouton {
   background: linear-gradient(#F9815B, #FFA571);
   border: 3px solid white;
   border-radius: 20px;
+  width: 45%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Zen Dots", sans-serif;
 }
-body main div:nth-child(3) {
+body main .BoxIcone2 {
   border: 3px solid white;
   border-radius: 20px;
   width: 100%;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .BoxIcone2 .icon {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  height: 68px;
+  padding: 0px 1% 0px 0%;
 }
